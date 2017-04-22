@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yupinhuang.github.io"></form>
@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/22/hello-world/">Hello World</a>
+      <a class="article-title" href="/2017/04/22/hello-world/">Google Application Engineer面经</a>
     </h1>
   
 
@@ -83,20 +83,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>坐在从加州到匹兹堡的飞机上，结束了精彩的找工作季。心情还是一如既往的平静和开心。最后一场面试是在Google Sunnyvale office。其实来之前的清晨签下了A9, 所以整个面试旅程没有紧张。但毕竟是曾经的梦想公司，所以还是在酒店简单过了一下系统设计问题。这个岗是Application Engineer, 只能在CA面试。最后，我会详细介绍一下我对这个岗位的了解。</p>
+<p>第二天清早打uber, 习惯性的选了拼车，结果正赶上busy hour, 司机要一下子接3个人。结果第一个乘客因为要赶时间，于是跟司机抱怨不能等。司机也是暴脾气，一下子就燃起来了。于是，我就在中间安抚大家。后来总算calm down, 送走了第一个乘客。司机问我是中国人吗，开始跟我讲中文。我很惊讶一个年纪五十多的人英文可以讲的这么溜。他说他是台湾人，但感觉更像北京大老爷们，吐槽湾区的各个公司，Trump的笑话，还讲Google面试不过是2轮脑筋急转弯，吃个饭，再干两轮。很快，我就到了office。</p>
+<h3 id="第一轮是美国胖叔叔，-两道题。"><a href="#第一轮是美国胖叔叔，-两道题。" class="headerlink" title="第一轮是美国胖叔叔， 两道题。"></a>第一轮是美国胖叔叔， 两道题。</h3><ol>
+<li>给一个整数数组，是先增后降的。找到peak的值。</li>
+<li>给一个整数set, 找到其中最长的递增子序列，递增是每次加1的那种。</li>
+</ol>
+<h3 id="第二轮感觉是中国叔叔。"><a href="#第二轮感觉是中国叔叔。" class="headerlink" title="第二轮感觉是中国叔叔。"></a>第二轮感觉是中国叔叔。</h3><ol>
+<li>给一个整数数组，全部unique. 找到所有和为k的pair. </li>
+<li>设计题目：一个shopping网站， backend的sever只能接受1request/s. 但是frontend会有peak hour 和 steady hour （我暂且这么描述，就是像深夜购物请求次数很少的时间段）。让你设计一个middle layer投balance the requests, smoothly connects frontend and backend.</li>
+</ol>
+<h3 id="中午吃饭，日本叔叔，磨磨蹭蹭我们扯东扯西，结果下午面试还晚了一丢丢。"><a href="#中午吃饭，日本叔叔，磨磨蹭蹭我们扯东扯西，结果下午面试还晚了一丢丢。" class="headerlink" title="中午吃饭，日本叔叔，磨磨蹭蹭我们扯东扯西，结果下午面试还晚了一丢丢。"></a>中午吃饭，日本叔叔，磨磨蹭蹭我们扯东扯西，结果下午面试还晚了一丢丢。</h3><h3 id="第三轮美国叔叔，纯system-design轮。"><a href="#第三轮美国叔叔，纯system-design轮。" class="headerlink" title="第三轮美国叔叔，纯system design轮。"></a>第三轮美国叔叔，纯system design轮。</h3><ol>
+<li>他首先问了有没有跟client接触的场合，demo什么的。我想了想，就给他特别详细的将了最近做的Blockchain capstone跟PwC的客户每周开会，讨论进展。他非常认真的记录了三页纸。那会儿，坐在会议室，就感觉特别像在公安局陈述详细的作案过程一样，哈哈哈哈（肯定是最近看嫌疑人X的现身中毒了）。对了，感觉Google的面试官都是经过专业训练过的，中间不会给你很多feedback，一直都看起来很nice的样子，但是不会让你会洞察到他们的心理什么的。每一场面试都是标准题目，然后他们认真记录下你全部是思维过程。剩下的都交给hire committee的人去evaluate。这跟A9和Adobe的面试很不一样，你能感受到他们对你很满意，跟你击掌，不停的夸你什么的。</li>
+<li>设计一个restaurants reservation 网站。跟他讨论了很多方面的问题，他都详细记录下了，然后我们focus在database tables design。 如何记录预定时段，客户，table, 时间， location。</li>
+</ol>
+<h3 id="第四轮印度哥哥。"><a href="#第四轮印度哥哥。" class="headerlink" title="第四轮印度哥哥。"></a>第四轮印度哥哥。</h3><ol>
+<li>给一个字符串只包含ABX三种字符，要求把X替换成A/B。要求返回所有可能的组合。</li>
+<li>给一个字符串，要求输出字母按freq降序输出。</li>
+<li>ngram的题，很简单的，我忘记具体啥了。</li>
+</ol>
+<p>整体来说，没什么难度。Evaluation的事就看hire committee了。决定去A9了，所以也没什么期待。只是打卡式的完成对这个曾经的梦想公司的追逐。其实也怪自己，去年9月HR就联系我面试，我说11月吧， 然后11月的时候我又拖到1月，后来HR没有主动联系我，我就想EOC多面面其他公司，攒足经验再去面Google, 结果春季的招聘机会烧的让人绝望。2月Google说SE已满，本来约的onsite被取消了，后来变成了AE。</p>
+<p>跟AE的工程师和好朋友聊了一下，说说我对这个岗位的理解。这个岗位是做internal tools的，client是公司内部人，比如HR, ERP, Financial 系统的整合与提升。30%的时间可能会跟各个部门的人communication, 写design docs，项目很灵活，可以接触到很多projects。原先，这个岗位有很多part-time, contractor来做，现在公司规模扩大，想自己搞起来。今年，很多朋友都走了AE的岗。工资方面比SE低一点，大概11W, signon可以argue到一个不错的level 看个人negotiation的能力了。</p>
+<p>总体来讲，Google还是有很多很好的资源，食堂的饭各种各样， café, 零食，坚果到处都是。可以上很多的课程，一起学习，健身房，医疗什么的。只是campus太大，即使同在一个楼，可能大部分人都不太认识，然后很多开会还是靠视频。我只是走马观花很浅显的了解，毕竟还没工作。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yupinhuang.github.io/2017/04/22/hello-world/" data-id="cj1tdhxo20000swt0l2wnr35m" class="article-share-link">Share</a>
+      <a data-url="http://yupinhuang.github.io/2017/04/22/hello-world/" data-id="cj1tecpv500000gt0o2pxxuob" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -131,12 +144,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/04/22/hello-world/">Hello World</a>
+            <a href="/2017/04/22/hello-world/">Google Application Engineer面经</a>
           </li>
         
       </ul>
@@ -152,7 +165,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
